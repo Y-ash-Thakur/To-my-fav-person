@@ -2,36 +2,46 @@ import LandingSection from './components/LandingSection';
 import TimelineSection from './components/TimelineSection';
 import LetterSection from './components/LetterSection';
 import SpotifySection from './components/SpotifySection';
+import meet1 from './assets/images/1st_meet.jpg'
+import meet2 from './assets/images/2nd_meet.jpg'
+import meet3 from './assets/images/3rd_meet.jpg'
+import meet4 from './assets/images/4th_meet.jpg'
+import { PhotoGallery } from './components/PhotoGallery';
+
 
 const timelineStories = [
   {
-    title: 'The Day We Met',
-    description: 'A moment that changed everything. I still remember the way you smiled, the way time seemed to slow down. That was the beginning of our beautiful journey together.',
-    imageUrl: 'https://images.pexels.com/photos/1024993/pexels-photo-1024993.jpeg?auto=compress&cs=tinysrgb&w=800'
+    title: 'Our First Meet',
+    Date: '15th July 2025',
+    description: 'You wasn\u0027t even expecting me that day — it was all Isha\u0027s plan 😄. The moment you saw me, your surprised face said it all. I was awkward as hell while taking pictures 😅, didn\u0027t know where to look or what to do, you can clearly see that in the picture 😂… but something shifted that day. I felt more comfortable, more me 💫.',
+    imageUrl: meet1
   },
   {
-    title: 'Our First Adventure',
-    description: 'Every step with you feels like discovering a new world. From spontaneous road trips to quiet moments watching sunsets, every adventure is better with you by my side.',
-    imageUrl: 'https://images.pexels.com/photos/1755385/pexels-photo-1755385.jpeg?auto=compress&cs=tinysrgb&w=800'
+    title: 'Our Second Meet',
+    Date: '19th july 2025',
+    description: 'I was so excited to meet you again, but yeah — a bit nervous too 🫣. We roamed around the mall, did bowling, laughed, talked, ate pizaaa!! and had a great time together, and yeah I wanted to hug you but didn\u0027t do it then 🙂. When it came to photos again, still awkward 😂 but way better than before. It felt easy, familiar — like we were getting used to each other\u0027s presence 🧡.',
+    imageUrl: meet2
   },
   {
-    title: 'The Little Things',
-    description: 'Morning coffee together, late night conversations, your laughter filling the room. These small moments have become my favorite parts of every day.',
-    imageUrl: 'https://images.pexels.com/photos/3822843/pexels-photo-3822843.jpeg?auto=compress&cs=tinysrgb&w=800'
+    title: 'Our Third Meet',
+    Date: '14th September 2025',
+    description: 'Ohhhhh My Goodnessss!!, This one took forever to happen — and man, I missed you so much in between 🥲, though we didn\u0027t take a picture together but It was all worth it 🫶🏻. The moment I saw you, everything felt right again. For the first time, I hugged you 💗. We talked a lot that day, ate pani puri together 🤭, laughed, shared so many things with each other and hugged again before leaving. That day felt special — like something real had begun ✨.',
+    imageUrl: meet3
   },
   {
-    title: 'Growing Together',
-    description: 'Through challenges and triumphs, we\'ve grown stronger together. You inspire me to be better, to dream bigger, and to love deeper with each passing day.',
-    imageUrl: 'https://images.pexels.com/photos/1024974/pexels-photo-1024974.jpeg?auto=compress&cs=tinysrgb&w=800'
+    title: 'Our Fourth Meet',
+    Date: '23th September 2025',
+    description: 'The best one yet — you looked absolutely stunning that day 😍. We hugged, took a photo (and guess what, no awkwardness this time 😌). We enjoyed, played garba, ate noodles 😂 and had the most amazing time together. Couldn\u0027t hug while leaving, but the day was already perfect 🌙💃.',
+    imageUrl: meet4
   },
   {
-    title: 'Creating Memories',
+    title: 'Our Fifth Meet',
     description: 'From quiet evenings at home to exciting new experiences, every moment with you becomes a cherished memory. Here\'s to all the beautiful moments yet to come.',
-    imageUrl: 'https://images.pexels.com/photos/1468379/pexels-photo-1468379.jpeg?auto=compress&cs=tinysrgb&w=800'
+    imageUrl: ''
   }
 ];
 
-const letterMessage = `My dearest love,
+const letterMessage = `My Dear Sweetuuu!!,
 
 As I reflect on our journey together, I'm overwhelmed with gratitude for every moment we've shared. You've brought so much joy, laughter, and love into my life in ways I never imagined possible.
 
@@ -57,7 +67,7 @@ function App() {
           index={index}
         />
       ))}
-
+      <PhotoGallery/>
       <LetterSection message={letterMessage} />
 
       <SpotifySection />

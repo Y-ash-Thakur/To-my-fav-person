@@ -53,13 +53,9 @@ export default function TimelineSection({ title, description, imageUrl, index }:
           viewport={{ once: false, margin: '-100px' }}
           className={`space-y-6 ${isLeft ? '' : 'md:direction-ltr'}`}
         >
-          <div className="inline-block">
-            <span className="text-sm font-light text-rose-400 tracking-widest uppercase">
-              Chapter {index + 1}
-            </span>
-          </div>
+          <div className="inline-block"></div>
 
-          <h2 className="text-4xl md:text-5xl font-light text-gray-800 leading-tight">
+          <h2 className="text-4xl md:text-5xl font-light text-rose-400 leading-tight">
             {title}
           </h2>
 

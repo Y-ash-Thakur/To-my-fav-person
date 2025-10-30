@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
-import { Music } from 'lucide-react';
+// import { Music } from 'lucide-react';
+import DishaImg from '../assets/images/Dishaa.jpg'
 
 interface SpotifySectionProps {
   playlistUrl?: string;
@@ -26,8 +27,8 @@ export default function SpotifySection({ playlistUrl }: SpotifySectionProps) {
           viewport={{ once: false }}
           className="flex justify-center mb-8"
         >
-          <div className="w-20 h-20 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full flex items-center justify-center">
-            <Music className="w-10 h-10 text-white" />
+          <div className="w-80 h-18 flex items-center justify-center">
+          <img src={DishaImg} className = "w-35 h-35 rounded-full object-cover" />          
           </div>
         </motion.div>
 
@@ -75,10 +76,10 @@ export default function SpotifySection({ playlistUrl }: SpotifySectionProps) {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.8 }}
             viewport={{ once: false }}
-            className="bg-white/10 backdrop-blur-sm rounded-2xl p-12 border border-white/20"
+            className="bg-white/10 backdrop-blur-sm rounded-2xl py-3 px-2 border border-white/20"
           >
             <p className="text-gray-300 font-light text-lg">
-              Add your Spotify playlist URL to share your favorite songs together
+              <button><a href="https://open.spotify.com/playlist/0Z8eRHyNyb6pr5CsMVqTcm">FOR YOU 🫶🏻🫶🏻</a></button>
             </p>
           </motion.div>
         )}
