@@ -7,6 +7,7 @@ import meet2 from './assets/images/2nd_meet.jpg'
 import meet3 from './assets/images/3rd_meet.jpg'
 import meet4 from './assets/images/4th_meet.jpg'
 import { PhotoGallery } from './components/PhotoGallery';
+import { LoveLetter } from './components/Letter';
 
 
 const timelineStories = [
@@ -64,7 +65,7 @@ function App() {
       ))}
       <PhotoGallery/>
       <LetterSection message={letterMessage} />
-
+      <LoveLetter/>
       <SpotifySection />
     </div>
   );
