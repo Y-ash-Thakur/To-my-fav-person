@@ -76,11 +76,10 @@ export default function SpotifySection({ playlistUrl }: SpotifySectionProps) {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.8 }}
             viewport={{ once: false }}
-            className="bg-white/10 backdrop-blur-sm rounded-2xl py-3 px-2 border border-white/20"
+            // className="bg-white/10 backdrop-blur-sm rounded-2xl py-3 px-2 border border-white/20"
           >
-            <p className="text-gray-300 font-light text-lg">
-              <button><a href="https://open.spotify.com/playlist/0Z8eRHyNyb6pr5CsMVqTcm">FOR YOU 🫶🏻🫶🏻</a></button>
-            </p>
+              <button className='text-gray-300 font-light text-lg hover:bg-rose-400 transition-all duration-300 bg-white/10 backdrop-blur-sm rounded-2xl py-3 px-6 border border-white/20 text-center font-bold:700'><a href="https://open.spotify.com/playlist/0Z8eRHyNyb6pr5CsMVqTcm">FOR YOU 🫶🏻🫶🏻</a></button>
+            
           </motion.div>
         )}
 
