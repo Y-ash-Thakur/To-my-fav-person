@@ -28,7 +28,7 @@ const SimpleLoading = () => {
     const timer = setTimeout(() => {
       setShow(false);
       clearInterval(textInterval);
-    },7000);
+    },8000);
 
     return () => {
       clearTimeout(timer);

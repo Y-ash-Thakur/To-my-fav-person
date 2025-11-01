@@ -53,17 +53,15 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Hide loading after 7 seconds
     const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 7000);
+    setIsLoading(false);
+  }, 10000);
 
-    return () => clearTimeout(timer);
-  }, []);
+  return () => clearTimeout(timer)
+}, [])
 
-  // Show loading animation
-  if (isLoading) {
-    return <SimpleLoading />;
+  if(isLoading){
+    return <SimpleLoading/>;
   }
 
   // Show main app content
