@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import LandingSection from './components/LandingSection';
 import TimelineSection from './components/TimelineSection';
 import LetterSection from './components/LetterSection';
@@ -7,8 +8,7 @@ import meet2 from './assets/images/2nd_meet.jpg'
 import meet3 from './assets/images/3rd_meet.jpg'
 import meet4 from './assets/images/4th_meet.jpg'
 import { PhotoGallery } from './components/PhotoGallery';
-import { LoveLetter } from './components/Letter';
-
+import SimpleLoading from './components/SimpleLoading';
 
 const timelineStories = [
   {
@@ -31,7 +31,7 @@ const timelineStories = [
   },
   {
     title: 'Our Fourth Meet 🫶🏻✨',
-    Date: '23th September 2025',
+    Date: '23rd September 2025',
     description: 'The best one yet — you looked absolutely stunning that day 😍. We hugged, took a photo (and guess what, no awkwardness this time 😌). We enjoyed, played garba, ate noodles 😂 and had the most amazing time together. Couldn\u0027t hug while leaving, but the day was already perfect 🌙💃.',
     imageUrl: meet4
   },
@@ -45,10 +45,28 @@ const timelineStories = [
 
 const letterMessage = `My Dear Sweetuuu!!,
 
+So it's been over 5 months since we first met, but it feels like I've known you for a really long time. To be really honest I had no idea that things would turn out this way between us. We started as friends, but somewhere along the way, my feelings for you grew overtime into something much deeper. And I was literally not expecting this at all. We may not be dating yet, but I feel like we have something really special going on here. I don't really have any count of how many times I think about you in a day, but it's definitely more than I can keep track of. You just stayes in my mind all the time and I find myself smiling for no reasons whenever I think about you. You won't believe how many times my mom has caught me smiling while doing random ass stuff 😂. Cause you are always there  
 
 Happy Birthday, To My More than a friend ❤️.`;
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Hide loading after 7 seconds
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 7000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  // Show loading animation
+  if (isLoading) {
+    return <SimpleLoading />;
+  }
+
+  // Show main app content
   return (
     <div className="min-h-screen bg-white">
       <LandingSection />
@@ -65,7 +83,6 @@ function App() {
       ))}
       <PhotoGallery/>
       <LetterSection message={letterMessage} />
-      <LoveLetter/>
       <SpotifySection />
     </div>
   );

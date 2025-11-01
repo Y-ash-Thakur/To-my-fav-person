@@ -7,8 +7,8 @@ export default function LandingSection() {
       <div className="absolute inset-0 bg-gradient-to-br from-rose-100 via-pink-50 to-amber-50" />
 
       <div className="absolute inset-0 opacity-30">
-        <div className="absolute top-20 left-20 w-72 h-72 bg-pink-200 rounded-full blur-3xl animate-float" />
-        <div className="absolute bottom-32 right-32 w-96 h-96 bg-rose-200 rounded-full blur-3xl animate-float-delayed" />
+        <div className="absolute top-20 left-20 w-72 h-72 bg-pink-600 rounded-full blur-3xl animate-float" />
+        <div className="absolute bottom-32 right-32 w-96 h-96 bg-rose-600 rounded-full blur-3xl animate-float-delayed" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-amber-100 rounded-full blur-3xl animate-pulse" />
       </div>
 

@@ -39,7 +39,7 @@ export default function SpotifySection({ playlistUrl }: SpotifySectionProps) {
           viewport={{ once: false }}
           className="text-4xl md:text-5xl font-light text-white mb-4"
         >
-          Play Our Songs
+          Songs For You!!
         </motion.h2>
 
         <motion.p
@@ -49,7 +49,7 @@ export default function SpotifySection({ playlistUrl }: SpotifySectionProps) {
           viewport={{ once: false }}
           className="text-gray-400 font-light text-lg mb-12"
         >
-          Every moment has its soundtrack
+          "Every note is a memory."
         </motion.p>
 
         {embedUrl ? (
@@ -64,7 +64,6 @@ export default function SpotifySection({ playlistUrl }: SpotifySectionProps) {
               src={embedUrl}
               width="100%"
               height="380"
-              frameBorder="0"
               allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
               loading="lazy"
               className="rounded-2xl"
@@ -88,9 +87,9 @@ export default function SpotifySection({ playlistUrl }: SpotifySectionProps) {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 1 }}
           viewport={{ once: false }}
-          className="text-gray-500 font-light text-sm mt-16"
+          className="text-gray-300 font-light mt-16"
         >
-          Made with love for you
+          Made with love, for you — Yash ❤️
         </motion.p>
       </motion.div>
     </section>

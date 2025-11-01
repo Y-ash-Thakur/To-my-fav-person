@@ -59,7 +59,7 @@ export default function TimelineSection({ title, description, imageUrl, index, D
           <h2 className="text-4xl md:text-5xl font-light text-rose-400 leading-tight">
             {title}
           </h2>
-          <h3 className='text-4xl md:text-3xl font-light text-rose-400 leading-tight'>{Date}</h3>
+          <h3 className='text-4xl md:text-4xl font-light text-rose-400 leading-tight'>{Date}</h3>
           <p className="text-lg md:text-xl text-gray-600 font-light leading-relaxed">
             {description}
           </p>
