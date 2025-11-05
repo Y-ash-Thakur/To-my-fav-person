@@ -28,7 +28,7 @@ export default function LandingSection() {
           transition={{ duration: 1, delay: 0.6 }}
           className="text-xl md:text-2xl text-gray-600 font-light mb-16"
         >
-          A journey through our beautiful moments
+          Some memories I'll always smile about 🫶🏻✨
         </motion.p>
 
         <motion.div
