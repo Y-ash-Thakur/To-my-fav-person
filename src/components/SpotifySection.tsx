@@ -28,7 +28,7 @@ export default function SpotifySection({ playlistUrl }: SpotifySectionProps) {
           className="flex justify-center mb-8"
         >
           <div className="w-80 h-18 flex items-center justify-center">
-          <img src={DishaImg} className = "w-35 h-35 rounded-full object-cover" />          
+          <img src={DishaImg} alt='' className = "w-35 h-35 rounded-full object-cover" />          
           </div>
         </motion.div>
 

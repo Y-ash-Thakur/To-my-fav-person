@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import LandingSection from './components/LandingSection';
 import TimelineSection from './components/TimelineSection';
 import LetterSection from './components/LetterSection';
@@ -7,6 +7,7 @@ import meet1 from './assets/images/1st_meet.jpg'
 import meet2 from './assets/images/2nd_meet.jpg'
 import meet3 from './assets/images/3rd_meet.jpg'
 import meet4 from './assets/images/4th_meet.jpg'
+import meet5 from './assets/images/holding_hands.jpg'
 import { PhotoGallery } from './components/PhotoGallery';
 import SimpleLoading from './components/SimpleLoading';
 
@@ -36,32 +37,25 @@ const timelineStories = [
     imageUrl: meet4
   },
   {
-    title: 'Our Fifth Meet',
+    title: 'Our Fifth Meet ❤️',
     Date: '2nd November 2025',
-    description: 'From quiet evenings at home to exciting new experiences, every moment with you becomes a cherished memory. Here\'s to all the beautiful moments yet to come.',
-    imageUrl: ''
+    description: "When the day finally arrived, I couldn't stop smiling. The moment I reached the place, my heartbeat started racing — I was nervous but so excited to see you after 40 days. And then, when I finally saw you, I just couldn't stop smiling. It was our first meet after confessing our feelings, and honestly I am considering it as our FIRST DATE already 🫶🏻. Just like our first hug, I kissed you for the first time… and honestly, I can't even explain how I felt in that moment. It felt so nice to hold your hands again after so long. We sat, talked, laughed, and ate together — and somehow, time just flew by. Before leaving, I kissed you again on your cheeks, wishing I could've spent a little more time with you. ❤️",
+    imageUrl: meet5
   }
 ];
 
 const letterMessage = `My Dear Sweetuuu!!,
 
-So it's been over 5 months since we first met, but it feels like I've known you for a really long time. To be really honest I had no idea that things would turn out this way between us. We started as friends, but somewhere along the way, my feelings for you grew overtime into something much deeper. And I was literally not expecting this at all. We may not be dating yet, but I feel like we have something really special going on here. I don't really have any count of how many times I think about you in a day, but it's definitely more than I can keep track of. You just stayes in my mind all the time and I find myself smiling for no reasons whenever I think about you. You won't believe how many times my mom has caught me smiling while doing random ass stuff 😂. Cause you are always there  
+So it's been over 5 months since we first talked, but it feels like I've known you for a really long time. To be really honest I had no idea that things would turn out this way between us. We started as friends, but somewhere along the way, my feelings for you grew overtime into something much deeper. And I was literally not expecting this at all. We may not be dating yet, but I feel like we have something really special going on here. I don't really have any count of how many times I think about you in a day, but it's definitely more than I can keep track of. You just stayes in my mind all the time and I find myself smiling for no reasons whenever I think about you. You won't believe how many times my mom has caught me smiling while doing random ass stuff 😂. Cause you are always there!! 🫶🏻. 
 
 Happy Birthday, To My More than a friend ❤️.`;
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-    setIsLoading(false);
-  }, 10000);
-
-  return () => clearTimeout(timer)
-}, [])
 
   if(isLoading){
-    return <SimpleLoading/>;
+    return <SimpleLoading onComplete={() => setIsLoading(false)}/>;
   }
 
   // Show main app content

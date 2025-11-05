@@ -1,14 +1,15 @@
 "use client";
-import { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useEffect, useState, useRef } from "react";
 
-const SimpleLoading = () => {
-  const [show, setShow] = useState(true);
+const SimpleLoading = ({ onComplete }: { onComplete: () => void }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [hasInteracted, setHasInteracted] = useState(false);
+  const [loadingStarted, setLoadingStarted] = useState(false);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
 
   const texts = [
-    "दिशा ❤️", 
     "Disha ❤️",       
+    "दिशा ❤️", 
     "দিশা ❤️",        
     "ದಿಶಾ ❤️",        
     "દિશા ❤️",        
@@ -20,46 +21,104 @@ const SimpleLoading = () => {
     "ଦିଶା ❤️",      
   ];  
 
-  useEffect(() => {
-    const textInterval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % texts.length)
-    }, 400);
+  const handleUserInteraction = () => {
+    if (!hasInteracted) {
+      setHasInteracted(true);
+      setLoadingStarted(true);
+      
+      // Start audio
+      if (audioRef.current) {
+        audioRef.current.play().catch(console.error);
+      }
 
-    const timer = setTimeout(() => {
-      setShow(false);
-      clearInterval(textInterval);
-    },8000);
+      // Set a timer to complete loading after 12 seconds FROM CLICK
+      const timer = setTimeout(() => {
+        if(audioRef.current) {
+          audioRef.current.pause();
+          audioRef.current.currentTime = 0;
+        }
+        onComplete(); // Notify App.tsx that loading is complete
+      }, 11000);
+
+      return () => clearTimeout(timer);
+    }
+  };
+
+  useEffect(() => {
+    // Initialize audio but don't play immediately
+    audioRef.current = new Audio('/music/starting_track_trimmed.mp3');
+    audioRef.current.volume = 0.5;
+    audioRef.current.loop = true;
 
     return () => {
-      clearTimeout(timer);
-      clearInterval(textInterval);
+      // Cleanup audio
+      if(audioRef.current) {
+        audioRef.current.pause();
+        audioRef.current.currentTime = 0;
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!loadingStarted) return;
+
+    const changeText = () => {
+      setCurrentIndex((prevIndex) => {
+        if (prevIndex === texts.length - 1) {
+          return 0;
+        }
+        return prevIndex + 1;
+      });
+    };
+
+    const timers: NodeJS.Timeout[] = [];
+
+    // First text stays for 4.5 seconds (from click)
+    timers.push(setTimeout(() => {
+      changeText();
+    }, 4500));
+
+    // Then change text every 350ms indefinitely
+    let accumulatedTime = 4500;
+
+    for(let i = 0; i < 100; i++) {
+      timers.push(
+        setTimeout(() => {
+          changeText();
+        }, accumulatedTime)
+      ); 
+      accumulatedTime += 350;
     }
-  }, [texts.length]);
+
+    return () => {
+      timers.forEach(timer => clearTimeout(timer));
+    };
+  }, [loadingStarted, texts.length]);
 
   return (
-    <AnimatePresence>
-      {show && (
-        <motion.div
-          initial={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.5 }}
-          className="fixed inset-0 bg-black flex items-center justify-center"
-        >
-          <AnimatePresence mode="wait">
-            <motion.h1
-              key={currentIndex}
-              initial={{ scale: 0.8, opacity: 0, y:20 }}
-              animate={{ scale: 1, opacity: 1, y:0 }}
-              exit={{ scale: 1.2, opacity: 0, y: -20 }}
-              transition={{ duration: 0.5 }}
-              className="text-6xl md:text-8xl text-white font-bold text-center"
-            >
-              {texts[currentIndex]}
-            </motion.h1>
-          </AnimatePresence>
-        </motion.div>
+    <div 
+      className="fixed inset-0 bg-black flex items-center justify-center cursor-pointer"
+      onClick={handleUserInteraction}
+    >
+      {/* Initial click prompt */}
+      {!hasInteracted && (
+        <div className="flex flex-col items-center justify-center">
+          <h1 className="text-6xl md:text-8xl text-white font-bold text-center mb-8">
+            Disha ❤️
+          </h1>
+          <div className="text-white text-lg text-center px-4">
+            Click anywhere to begin our journey
+          </div>
+        </div>
       )}
-    </AnimatePresence>
+
+      {/* Text changes after click - no animations */}
+      {hasInteracted && (
+        <h1 className="text-6xl md:text-8xl text-white font-bold text-center">
+          {texts[currentIndex]}
+        </h1>
+      )}
+    </div>
   )
 }
 

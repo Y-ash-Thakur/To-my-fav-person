@@ -6,6 +6,7 @@ import meet3 from '../assets/images/3rd_meet.jpg';
 import meet4 from '../assets/images/4th_meet.jpg';
 import meet5 from '../assets/images/5th_meet.jpg';
 import meet6 from '../assets/images/6th_meet.jpg';
+import meet7 from '../assets/images/holding_hands.jpg';
 
 const galleryImages = [
   { id: 1, src: meet1, alt: 'Memory 1' },
@@ -14,7 +15,7 @@ const galleryImages = [
   { id: 4, src: meet4, alt: 'Memory 4' },
   { id: 5, src: meet5, alt: 'Memory 5' },
   { id: 6, src: meet6, alt: 'Memory 6' },
-  { id: 7, src: '/placeholder.svg', alt: 'Memory 7' },
+  { id: 7, src: meet7, alt: 'Memory 7' },
   { id: 8, src: '/placeholder.svg', alt: 'Memory 8' },
 ];
 
