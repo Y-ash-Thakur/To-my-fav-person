@@ -107,7 +107,7 @@ const SimpleLoading = ({ onComplete }: { onComplete: () => void }) => {
             Disha ❤️
           </h1>
           <div className="text-white text-lg text-center px-4">
-            Click anywhere to begin our journey
+            Click anywhere to begin!! 🫶🏻
           </div>
         </div>
       )}
