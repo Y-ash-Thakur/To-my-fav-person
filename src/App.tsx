@@ -46,9 +46,12 @@ const timelineStories = [
 
 const letterMessage = `My Dear Sweetuuu!!,
 
-So it's been over 5 months since we first talked, but it feels like I've known you for a really long time. To be really honest I had no idea that things would turn out this way between us. We started as friends, but somewhere along the way, my feelings for you grew overtime into something much deeper. And I was literally not expecting this at all. We may not be dating yet, but I feel like we have something really special going on here. I don't really have any count of how many times I think about you in a day, but it's definitely more than I can keep track of. You just stayes in my mind all the time and I find myself smiling for no reasons whenever I think about you. You won't believe how many times my mom has caught me smiling while doing random ass stuff 😂. Cause you are always there!! 🫶🏻. 
+So, it's been over 5 months since we first talked, but it feels like I've known you for a really long time. To be honest, I had no idea that things would turn out this way between us. We started as friends, but somewhere along the way, my feelings for you grew into something much deeper — and honestly, I wasn't expecting that at all.
 
-Happy Birthday, To My More than a friend ❤️.`;
+We may not be dating yet, but I feel like we have something really special going on. I've lost count of how many times I think about you in a day — it's definitely more than I can keep track of. You just stay in my mind all the time, and I find myself smiling for no reason whenever I think about you. You won't believe how many times my mom has caught me smiling while doing random stuff 😂 because you're always there!! 🫶🏻.
+And I wish it stayes the same. 
+
+Happy Birthday, to my more-than-a-friend Disha!! ❤️`;
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);

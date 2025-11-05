@@ -8,17 +8,17 @@ const SimpleLoading = ({ onComplete }: { onComplete: () => void }) => {
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   const texts = [
-    "Disha ❤️",       
-    "दिशा ❤️", 
-    "দিশা ❤️",        
-    "ದಿಶಾ ❤️",        
-    "દિશા ❤️",        
-    "దిశ ❤️",         
-    "திசா ❤️",        
-    "दिशा ❤️",        
-    "ദിശ ❤️",      
-    "ਦਿਸ਼ਾ ❤️",       
-    "ଦିଶା ❤️",      
+    "Disha❤️",       
+    "दिशा❤️", 
+    "দিশা❤️",        
+    "ದಿಶಾ❤️",        
+    "દિશા❤️",        
+    "దిశ❤️",         
+    "திசா❤️",        
+    "दिशा❤️",        
+    "ദിശ❤️",      
+    "ਦਿਸ਼ਾ❤️",       
+    "ଦିଶା❤️",      
   ];  
 
   const handleUserInteraction = () => {
@@ -87,7 +87,7 @@ const SimpleLoading = ({ onComplete }: { onComplete: () => void }) => {
           changeText();
         }, accumulatedTime)
       ); 
-      accumulatedTime += 350;
+      accumulatedTime += 320;
     }
 
     return () => {
@@ -104,7 +104,7 @@ const SimpleLoading = ({ onComplete }: { onComplete: () => void }) => {
       {!hasInteracted && (
         <div className="flex flex-col items-center justify-center">
           <h1 className="text-6xl md:text-8xl text-white font-bold text-center mb-8">
-            Disha ❤️
+            Disha❤️
           </h1>
           <div className="text-white text-lg text-center px-4">
             Click anywhere to begin!! 🫶🏻
