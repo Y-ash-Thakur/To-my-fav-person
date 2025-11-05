@@ -15,7 +15,7 @@ const timelineStories = [
   {
     title: 'Our First Meet 😂',
     Date: '15th July 2025',
-    description: 'You wasn\u0027t even expecting me that day — it was all Isha\u0027s plan 😄. The moment you saw me, your surprised face said it all. I was awkward as hell while taking pictures 😅, didn\u0027t know where to look or what to do, you can clearly see that in the picture 😂… but something shifted that day. I felt more comfortable around you, felt more me 💫.',
+    description: `You weren't even expecting me that day — it was all Isha's plan 😄. The moment you saw me, your surprised face said it all. I was awkward as hell while taking pictures 😅— didn't know where to look or what to do. You can clearly see that in the pictures 😂… but something shifted that day. I felt more comfortable around you — felt more me 💫.`,
     imageUrl: meet1
   },
   {
@@ -49,7 +49,7 @@ const letterMessage = `My Dear Sweetuuu!!,
 So, it's been over 5 months since we first talked, but it feels like I've known you for a really long time. To be honest, I had no idea that things would turn out this way between us. We started as friends, but somewhere along the way, my feelings for you grew into something much deeper — and honestly, I wasn't expecting that at all.
 
 We may not be dating yet, but I feel like we have something really special going on. I've lost count of how many times I think about you in a day — it's definitely more than I can keep track of. You just stay in my mind all the time, and I find myself smiling for no reason whenever I think about you. You won't believe how many times my mom has caught me smiling while doing random stuff 😂 because you're always there!! 🫶🏻.
-And I wish it stayes the same. 
+And I wish it always stayes the same ❤️. 
 
 Happy Birthday, to my more-than-a-friend Disha!! ❤️`;
 

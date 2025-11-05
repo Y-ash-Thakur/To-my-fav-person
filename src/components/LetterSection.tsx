@@ -65,7 +65,7 @@ export default function LetterSection({ message }: LetterSectionProps) {
             className="mt-12 text-right"
           >
             <p className="text-gray-600 font-light italic">With all my love,</p>
-            <p className="text-gray-800 font-light text-xl mt-2">Always yours</p>
+            <p className="text-gray-800 font-light text-xl mt-2"> — Yash❤️</p>
           </motion.div>
         </div>
       </motion.div>
