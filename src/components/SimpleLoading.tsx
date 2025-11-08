@@ -76,10 +76,10 @@ const SimpleLoading = ({ onComplete }: { onComplete: () => void }) => {
     // First text stays for 4.5 seconds (from click)
     timers.push(setTimeout(() => {
       changeText();
-    }, 4450));
+    }, 4600));
 
     // Then change text every 350ms indefinitely
-    let accumulatedTime = 4450;
+    let accumulatedTime = 4600;
 
     for(let i = 0; i < 100; i++) {
       timers.push(
