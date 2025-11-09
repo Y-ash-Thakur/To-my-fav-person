@@ -27,9 +27,10 @@ export const PhotoGallery = () => {
     <>
       <section className="py-20 px-4 md:px-8 bg-background">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl md:text-6xl font-bold text-center mb-16 text-gradient">
-            Us So Far ✨
+          <h2 className="text-4xl md:text-6xl font-bold text-center mb-8 text-gradient">
+            Us So Far✨
           </h2>
+          <h3 className='text-center mb-10 font-bold text-lg'>Our Gallery🖼️</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {galleryImages.map((image, index) => (
               <div
