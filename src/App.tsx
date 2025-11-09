@@ -44,14 +44,21 @@ const timelineStories = [
   }
 ];
 
-const letterMessage = `My Dear Sweetuuu!!,
+const letterMessage = `My Kiwi, Sweetuuu, Goluu Moluu, Cutieeee, Bacchee!!❤️
 
 So, it's been over 5 months since we first talked, but it feels like I've known you for a really long time. To be honest, I had no idea that things would turn out this way between us. We started as friends, but somewhere along the way, my feelings for you grew into something much deeper — and honestly, I wasn't expecting that at all.
 
-We may not be dating yet, but I feel like we have something really special going on. I've lost count of how many times I think about you in a day — it's definitely more than I can keep track of. You just stay in my mind all the time, and I find myself smiling for no reason whenever I think about you. You won't believe how many times my mom has caught me smiling while doing random stuff 😂 because you're always there!! 🫶🏻.
-And I wish it always stayes the same ❤️. 
+We may not be dating yet, but I feel like we have something really special going on. I've lost count of how many times I think about you in a day — it's definitely more than I can keep track of. You just stay in my mind all the time, and I find myself smiling for no reason whenever I think about you. You won't believe how many times my mom has caught me smiling while doing random stuff 😂 because you're always there!! 🫶🏻
 
-Happy Birthday, to my more-than-a-friend Disha!! ❤️`;
+And I wish it always stays the same ❤️
+
+And hey, it's your birthday!! I just wanted to make you feel special 🫶🏻 — to let you know that you have someone who cares about you a lot, someone who adores you endlessly, and someone who wants to have you around all the time.
+
+And trust me, I've never enjoyed creating something as much as I enjoyed making this for you. Even after finishing it, I kept making small changes to it like an idiot 😂 — but hey, that's just me 🫶🏻
+
+So, on this special day of yours, I just want to thank you for being you ❤️ — and don't you dare change the way you are, because I like you just the way you are🫶🏻.
+
+Happy Birthday, to my more-than-a-friend, Disha!! ❤️`;
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
