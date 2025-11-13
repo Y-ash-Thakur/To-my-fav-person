@@ -97,7 +97,12 @@ const SimpleLoading = ({ onComplete }: { onComplete: () => void }) => {
 
   return (
     <div 
-      className="fixed inset-0 bg-black flex items-center justify-center cursor-pointer"
+      className="fixed inset-0 bg-cover bg-center flex items-center justify-center cursor-pointer"
+      style={{
+        backgroundImage: "url('/images/front-background-1.jpg')",
+        backgroundBlendMode: "overlay",
+        backgroundColor: "rgba(0,0,0,0.6)",
+      }}
       onClick={handleUserInteraction}
     >
       {/* Initial click prompt */}
