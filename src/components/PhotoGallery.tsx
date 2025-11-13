@@ -8,6 +8,7 @@ import meet5 from '../assets/images/5th_meet.jpg';
 import meet6 from '../assets/images/6th_meet.jpg';
 import meet7 from '../assets/images/holding_hands.jpg';
 import meet8 from '../assets/images/8th_meet.jpg';
+import brickBg from '../assets/images/brick-wall.jpg'
 
 const galleryImages = [
   { id: 1, src: meet1, alt: 'Memory 1' },
@@ -25,7 +26,9 @@ export const PhotoGallery = () => {
 
   return (
     <>
-      <section className="py-20 px-4 md:px-8 bg-background">
+      <section className="py-20 px-4 md:px-8 bg-background bg-center"
+        style={{ backgroundImage: `url(${brickBg})` }}
+      >
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl md:text-6xl font-bold text-center mb-8 text-gradient">
             Us So Far✨
