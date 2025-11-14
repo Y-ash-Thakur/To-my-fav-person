@@ -11,12 +11,12 @@ interface TimelineSectionProps {
 
 // 🎨 Cinematic warm gradient palette
 const gradients = [
-  "bg-gradient-to-br from-rose-50 via-amber-50 to-orange-100",
-  "bg-gradient-to-br from-orange-50 via-rose-50 to-amber-100",
-  "bg-gradient-to-br from-rose-100 via-orange-50 to-amber-50",
-  "bg-gradient-to-br from-yellow-50 via-amber-50 to-orange-100",
-  "bg-gradient-to-br from-orange-100 via-rose-100 to-amber-200",
-  "bg-gradient-to-br from-stone-50 via-amber-50 to-orange-50",
+  "bg-gradient-to-br from-rose-50 via-amber-50 to-orange-50",
+  "bg-gradient-to-br from-rose-50 via-orange-50 to-amber-50",
+  "bg-gradient-to-br from-orange-50 via-rose-50 to-amber-50",
+  "bg-gradient-to-br from-amber-50 via-rose-50 to-orange-50",
+  "bg-gradient-to-br from-orange-50 via-amber-50 to-rose-50",
+  "bg-gradient-to-br from-rose-50 via-orange-50 to-amber-50",
 ];
 
 export default function TimelineSection({
