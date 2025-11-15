@@ -77,7 +77,7 @@ export default function SpotifySection({ playlistUrl }: SpotifySectionProps) {
             viewport={{ once: false }}
             // className="bg-white/10 backdrop-blur-sm rounded-2xl py-3 px-2 border border-white/20"
           >
-              <button className='text-gray-300 font-light text-lg hover:bg-rose-400 hover:text-black transition duration-300 ease-in-out bg-white/10 backdrop-blur-sm rounded-2xl py-3 px-6 border border-white/20 text-center font-bold:700'><a href="https://open.spotify.com/playlist/0Z8eRHyNyb6pr5CsMVqTcm">FOR YOU 🫶🏻🫶🏻</a></button>
+              <button className='text-gray-300 font-light text-lg hover:bg-rose-400 hover:text-black transition duration-300 ease-in-out bg-white/10 backdrop-blur-sm rounded-2xl py-3 px-6 border border-white/20 text-center font-bold:700'><a href="https://open.spotify.com/playlist/0U6Pw7KxtTEy4V0TrumG4L">FOR YOU 🫶🏻🫶🏻</a></button>
             
           </motion.div>
         )}
