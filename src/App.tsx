@@ -58,7 +58,7 @@ And trust me, I've never enjoyed creating something as much as I enjoyed making 
 
 So, on this special day of yours, I just want to thank you for being you ❤️ — and don't you dare change the way you are, because I like you just the way you are🫶🏻.
 
-Happy Birthday, to my more-than-a-friend, Disha!! ❤️`;
+Happy Birthday, to my Sexy Girl-Friend, Disha!! ❤️`;
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
